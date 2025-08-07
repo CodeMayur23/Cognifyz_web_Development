@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Hamburger Menu</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            body 
+            {
+            font-family: sans-serif;
+            }
+
+            nav 
+            {
+            background-color: #333;
+            padding: 10px 20px;
+            }
+
+            .nav-links 
+            {
+            display: flex;
+            gap: 20px;
+            }
+
+            .nav-links a 
+            {
+            color: white;
+            text-decoration: none;
+            }
+
+            .menu-toggle 
+            {
+            display: none;
+            }
+
+            .hamburger 
+            {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+            }
+
+            @media (max-width: 768px) 
+            {
+            .hamburger 
+            {
+                display: block;
+            }
+
+            .nav-links 
+            {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                padding-top: 10px;
+            }
+
+            .menu-toggle:checked + .hamburger + .nav-links {
+                display: flex;
+            }
+            }
+       </style>
+    </head>
+    <body>
+
+        <nav>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label> <!-- ☰ -->
+            <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            </div>
+        </nav>
+
+    </body>
+</html>
